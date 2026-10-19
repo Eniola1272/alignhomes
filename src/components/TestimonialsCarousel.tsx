@@ -107,7 +107,7 @@ export function TestimonialsCarousel() {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-[#FAF8F5] relative overflow-hidden"
+      className="py-24 bg-alabaster relative overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -115,8 +115,8 @@ export function TestimonialsCarousel() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div className="max-w-2xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#DDD6C8] text-xs font-semibold tracking-wider uppercase text-[#1B3B2B]">
-              <Sparkles className="w-3.5 h-3.5 text-[#C87D55]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-alabaster border border-[#DDD6C8] text-xs font-semibold tracking-wider uppercase text-forest">
+              <Sparkles className="w-3.5 h-3.5 text-terracotta" />
               <span>Verified Host Stories</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#11261B] tracking-tight">
@@ -132,23 +132,23 @@ export function TestimonialsCarousel() {
           <div className="flex items-center gap-3">
             <button
               onClick={handlePrev}
-              className="p-3 rounded-full bg-[#FAF8F5] border border-[#DCD5C8] text-[#1B3B2B] hover:bg-[#F2EFE9] transition-all shadow-xs"
+              className="p-3 rounded-full bg-alabaster border border-[#DCD5C8] text-forest hover:bg-sand transition-all shadow-xs"
               aria-label="Previous Testimonial"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={handleNext}
-              className="p-3 rounded-full bg-[#1B3B2B] text-white hover:bg-[#224935] transition-all shadow-md shadow-[#1B3B2B]/15"
+              className="p-3 rounded-full bg-forest text-white hover:bg-forest-hover transition-all shadow-md shadow-forest/15"
               aria-label="Next Testimonial"
             >
-              <ChevronRight className="w-5 h-5 text-[#C87D55]" />
+              <ChevronRight className="w-5 h-5 text-terracotta" />
             </button>
           </div>
         </div>
 
         {/* Active Testimonial Card */}
-        <div className="rounded-3xl bg-[#F2EFE9] border border-[#E6E0D4] p-8 sm:p-12 lg:p-14 shadow-xl shadow-[#1B3B2B]/5 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="rounded-3xl bg-sand border border-[#E6E0D4] p-8 sm:p-12 lg:p-14 shadow-xl shadow-forest/5 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Image & Property Snapshot */}
           <div className="lg:col-span-5 relative">
             <div className="relative h-72 sm:h-96 w-full rounded-2xl overflow-hidden border border-[#DDD6C8] shadow-md bg-[#E2DBD0]">
@@ -159,10 +159,10 @@ export function TestimonialsCarousel() {
                 className="object-cover transition-transform duration-700 ease-out"
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
               
               {/* Location Badge */}
-              <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#FAF8F5]/90 backdrop-blur-md text-[11px] font-semibold text-[#1B3B2B] border border-white/60">
+              <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-alabaster/90 backdrop-blur-md text-[11px] font-semibold text-forest border border-white/60">
                 {current.location}
               </div>
 
@@ -176,8 +176,8 @@ export function TestimonialsCarousel() {
             </div>
 
             {/* Float Highlight Badge */}
-            <div className="absolute -bottom-4 right-4 sm:-bottom-5 sm:right-6 px-4 py-2.5 rounded-2xl bg-[#1B3B2B] text-white border border-white/10 shadow-lg text-center">
-              <div className="font-serif text-xl sm:text-2xl font-bold text-[#FAF8F5]">
+            <div className="absolute -bottom-4 right-4 sm:-bottom-5 sm:right-6 px-4 py-2.5 rounded-2xl bg-forest text-white border border-white/10 shadow-lg text-center">
+              <div className="font-serif text-xl sm:text-2xl font-bold text-alabaster">
                 {current.metric.value}
               </div>
               <div className="text-[10px] text-white/70 font-sans uppercase tracking-wider">
@@ -189,11 +189,11 @@ export function TestimonialsCarousel() {
           {/* Right Column: Quote & Testimonial Details */}
           <div className="lg:col-span-7 space-y-6">
             {/* Star Rating */}
-            <div className="flex items-center gap-1 text-[#C87D55]">
+            <div className="flex items-center gap-1 text-terracotta">
               {[...Array(current.rating)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-current" />
               ))}
-              <span className="text-xs font-semibold text-[#1B3B2B] ml-2 font-mono">
+              <span className="text-xs font-semibold text-forest ml-2 font-mono">
                 5.0 Verified Host
               </span>
             </div>
@@ -231,8 +231,8 @@ export function TestimonialsCarousel() {
               onClick={() => setCurrentIndex(idx)}
               className={`h-2 rounded-full transition-all duration-300 ${
                 currentIndex === idx
-                  ? "w-8 bg-[#1B3B2B]"
-                  : "w-2 bg-[#DCD5C8] hover:bg-[#C87D55]"
+                  ? "w-8 bg-forest"
+                  : "w-2 bg-[#DCD5C8] hover:bg-terracotta"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />

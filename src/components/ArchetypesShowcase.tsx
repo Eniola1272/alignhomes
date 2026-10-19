@@ -86,11 +86,11 @@ export function ArchetypesShowcase() {
   ];
 
   return (
-    <section className="py-24 bg-[#F2EFE9] border-t border-[#E6E0D4] relative">
+    <section className="py-24 bg-sand border-t border-[#E6E0D4] relative">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-14 space-y-3">
-          <span className="text-xs font-semibold tracking-wider uppercase text-[#C87D55] font-sans">
+          <span className="text-xs font-semibold tracking-wider uppercase text-terracotta font-sans">
             Specialized Architectures
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#11261B] tracking-tight">
@@ -110,8 +110,8 @@ export function ArchetypesShowcase() {
               onClick={() => setActiveArchetype(idx)}
               className={`whitespace-nowrap px-5 py-3 rounded-2xl text-xs font-semibold tracking-wide transition-all duration-200 border ${
                 activeArchetype === idx
-                  ? "bg-[#1B3B2B] text-[#FAF8F5] border-[#1B3B2B] shadow-md shadow-[#1B3B2B]/10"
-                  : "bg-[#FAF8F5] text-[#4A534F] border-[#E3DDCF] hover:border-[#1B3B2B]/40"
+                  ? "bg-forest text-alabaster border-forest shadow-md shadow-forest/10"
+                  : "bg-alabaster text-[#4A534F] border-[#E3DDCF] hover:border-forest/40"
               }`}
             >
               {arch.name}
@@ -123,9 +123,9 @@ export function ArchetypesShowcase() {
         {(() => {
           const current = archetypes[activeArchetype];
           return (
-            <div className="rounded-3xl bg-[#FAF8F5] border border-[#E6E0D4] overflow-hidden shadow-xl shadow-[#1B3B2B]/5 grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <div className="rounded-3xl bg-alabaster border border-[#E6E0D4] overflow-hidden shadow-xl shadow-forest/5 grid grid-cols-1 lg:grid-cols-12 gap-0">
               {/* Left Column: Image with Hover Zoom */}
-              <div className="lg:col-span-7 relative h-80 lg:h-auto min-h-[420px] overflow-hidden group">
+              <div className="lg:col-span-7 relative h-80 lg:h-auto min-h-105 overflow-hidden group">
                 <Image
                   src={current.image}
                   alt={current.name}
@@ -133,9 +133,9 @@ export function ArchetypesShowcase() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 58vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent lg:hidden" />
                 <div className="absolute bottom-4 left-4 right-4 text-white lg:hidden">
-                  <span className="text-xs uppercase tracking-wider text-[#FAF8F5]/80 font-mono">
+                  <span className="text-xs uppercase tracking-wider text-alabaster/80 font-mono">
                     {current.category}
                   </span>
                   <div className="font-serif text-2xl font-bold">{current.name}</div>
@@ -145,7 +145,7 @@ export function ArchetypesShowcase() {
               {/* Right Column: Specifications & Feature Checklist */}
               <div className="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-between space-y-6">
                 <div>
-                  <div className="hidden lg:block text-xs font-semibold uppercase tracking-wider text-[#C87D55] mb-1 font-mono">
+                  <div className="hidden lg:block text-xs font-semibold uppercase tracking-wider text-terracotta mb-1 font-mono">
                     {current.category}
                   </div>
                   <h3 className="hidden lg:block font-serif text-3xl font-medium text-[#11261B] mb-3">
@@ -156,7 +156,7 @@ export function ArchetypesShowcase() {
                   </p>
 
                   <div className="space-y-3 pt-2">
-                    <div className="text-xs font-semibold uppercase tracking-wider text-[#1B3B2B]">
+                    <div className="text-xs font-semibold uppercase tracking-wider text-forest">
                       Engineered Features:
                     </div>
                     {current.features.map((feat, i) => (
@@ -173,19 +173,19 @@ export function ArchetypesShowcase() {
                 <div className="pt-6 border-t border-[#EAE4D7] space-y-3">
                   <div className="flex justify-between text-xs">
                     <span className="text-[#78857F]">Target PMS Stack:</span>
-                    <span className="font-semibold text-[#1B3B2B] font-mono">{current.recommendedPms}</span>
+                    <span className="font-semibold text-forest font-mono">{current.recommendedPms}</span>
                   </div>
                   <div className="flex justify-between text-xs">
                     <span className="text-[#78857F]">Default Checkout Logic:</span>
-                    <span className="font-semibold text-[#C87D55] font-mono">{current.checkoutFlow}</span>
+                    <span className="font-semibold text-terracotta font-mono">{current.checkoutFlow}</span>
                   </div>
 
                   <a
                     href="#audit-request"
-                    className="mt-4 w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#1B3B2B] text-[#FAF8F5] text-xs font-semibold tracking-wider uppercase hover:bg-[#224935] transition-colors"
+                    className="mt-4 w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-forest text-alabaster text-xs font-semibold tracking-wider uppercase hover:bg-forest-hover transition-colors"
                   >
                     <span>Audit My {current.name} Listing</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#C87D55]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-terracotta" />
                   </a>
                 </div>
               </div>

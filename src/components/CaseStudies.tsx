@@ -101,12 +101,12 @@ export function CaseStudies() {
   ];
 
   return (
-    <section id="case-studies" className="py-24 bg-[#FAF8F5] relative">
+    <section id="case-studies" className="py-24 bg-alabaster relative">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl space-y-3">
-            <span className="text-xs font-semibold tracking-wider uppercase text-[#C87D55] font-sans">
+            <span className="text-xs font-semibold tracking-wider uppercase text-terracotta font-sans">
               Case Studies & Proof
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#11261B] tracking-tight">
@@ -117,8 +117,8 @@ export function CaseStudies() {
               dependency with our bespoke engineering.
             </p>
           </div>
-          <div className="text-sm font-medium text-[#1B3B2B] flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#10B981]" />
+          <div className="text-sm font-medium text-forest flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-wealth" />
             <span>Average Client ROI: 11.4x in Year 1</span>
           </div>
         </div>
@@ -129,7 +129,7 @@ export function CaseStudies() {
             <div
               key={study.id}
               onClick={() => setSelectedStudy(study)}
-              className="group cursor-pointer rounded-3xl bg-[#F2EFE9] border border-[#E6E0D4] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-[#1B3B2B]/8 hover:-translate-y-1 hover:border-[#C87D55]/60"
+              className="group cursor-pointer rounded-3xl bg-sand border border-[#E6E0D4] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-forest/8 hover:-translate-y-1 hover:border-terracotta/60"
             >
               {/* Image with subtle zoom */}
               <div className="relative h-64 w-full overflow-hidden bg-[#E2DBD0]">
@@ -140,10 +140,10 @@ export function CaseStudies() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
                 
                 {/* Location Badge */}
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#FAF8F5]/90 backdrop-blur-md text-[11px] font-medium text-[#1B3B2B] border border-white/50">
+                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-alabaster/90 backdrop-blur-md text-[11px] font-medium text-forest border border-white/50">
                   {study.location}
                 </div>
 
@@ -160,7 +160,7 @@ export function CaseStudies() {
                   {study.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-1 rounded-md bg-[#FAF8F5] border border-[#E3DDCF] text-[11px] font-medium text-[#4A534F]"
+                      className="px-2.5 py-1 rounded-md bg-alabaster border border-[#E3DDCF] text-[11px] font-medium text-[#4A534F]"
                     >
                       {tag}
                     </span>
@@ -170,15 +170,15 @@ export function CaseStudies() {
                 {/* Metrics Grid */}
                 <div className="grid grid-cols-2 gap-3 pt-3 border-t border-[#E4DEC3]">
                   {study.metrics.slice(0, 2).map((m) => (
-                    <div key={m.label} className="p-2.5 rounded-xl bg-[#FAF8F5] border border-[#E8E2D7]">
+                    <div key={m.label} className="p-2.5 rounded-xl bg-alabaster border border-[#E8E2D7]">
                       <div className="text-[10px] text-[#78857F] uppercase tracking-wide font-medium">{m.label}</div>
-                      <div className="font-serif text-lg font-bold text-[#1B3B2B]">{m.value}</div>
+                      <div className="font-serif text-lg font-bold text-forest">{m.value}</div>
                     </div>
                   ))}
                 </div>
 
                 {/* CTA Link */}
-                <div className="pt-2 flex items-center justify-between text-xs font-semibold text-[#1B3B2B] group-hover:text-[#C87D55] transition-colors">
+                <div className="pt-2 flex items-center justify-between text-xs font-semibold text-forest group-hover:text-terracotta transition-colors">
                   <span>View Technical Breakdown</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
@@ -191,17 +191,17 @@ export function CaseStudies() {
       {/* Case Study Detail Modal */}
       {selectedStudy && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#FAF8F5] border border-[#E5E0D8] p-6 sm:p-9 shadow-2xl space-y-6">
+          <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl bg-alabaster border border-[#E5E0D8] p-6 sm:p-9 shadow-2xl space-y-6">
             <button
               onClick={() => setSelectedStudy(null)}
-              className="absolute top-5 right-5 p-2 rounded-full bg-[#F2EFE9] text-[#1B3B2B] hover:bg-[#E8E2D7] transition-colors"
+              className="absolute top-5 right-5 p-2 rounded-full bg-sand text-forest hover:bg-[#E8E2D7] transition-colors"
               aria-label="Close Modal"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-[#C87D55]">
+              <div className="text-xs font-semibold uppercase tracking-wider text-terracotta">
                 {selectedStudy.location}
               </div>
               <h3 className="font-serif text-3xl font-bold text-[#11261B] mt-1">
@@ -212,9 +212,9 @@ export function CaseStudies() {
             {/* Metrics */}
             <div className="grid grid-cols-3 gap-3">
               {selectedStudy.metrics.map((m) => (
-                <div key={m.label} className="p-3.5 rounded-xl bg-[#F2EFE9] border border-[#E6E0D4] text-center">
+                <div key={m.label} className="p-3.5 rounded-xl bg-sand border border-[#E6E0D4] text-center">
                   <div className="text-xs text-[#78857F] font-medium">{m.label}</div>
-                  <div className="font-serif text-xl sm:text-2xl font-bold text-[#1B3B2B] mt-1">
+                  <div className="font-serif text-xl sm:text-2xl font-bold text-forest mt-1">
                     {m.value}
                   </div>
                 </div>
@@ -236,7 +236,7 @@ export function CaseStudies() {
               {/* Quote */}
               <blockquote className="p-4 rounded-2xl bg-[#EBF5EF] border border-[#BFDFCD] italic text-[#115E3F] text-sm">
                 "{selectedStudy.quote.text}"
-                <footer className="not-italic text-xs font-semibold text-[#1B3B2B] mt-2">
+                <footer className="not-italic text-xs font-semibold text-forest mt-2">
                   — {selectedStudy.quote.author}, {selectedStudy.quote.role}
                 </footer>
               </blockquote>
@@ -248,7 +248,7 @@ export function CaseStudies() {
                   {selectedStudy.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-lg bg-[#FAF8F5] border border-[#DCD5C8] text-xs font-mono text-[#1B3B2B]"
+                      className="px-3 py-1 rounded-lg bg-alabaster border border-[#DCD5C8] text-xs font-mono text-forest"
                     >
                       {tech}
                     </span>
@@ -264,7 +264,7 @@ export function CaseStudies() {
                   const el = document.getElementById("audit-request");
                   if (el) el.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="px-6 py-3 rounded-full bg-[#1B3B2B] text-white text-xs font-semibold tracking-wider uppercase hover:bg-[#224935] transition-colors"
+                className="px-6 py-3 rounded-full bg-forest text-white text-xs font-semibold tracking-wider uppercase hover:bg-forest-hover transition-colors"
               >
                 Request Similar Architecture for My Property →
               </button>

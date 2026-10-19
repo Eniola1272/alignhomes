@@ -22,7 +22,7 @@ export default function LandingPage() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-[#FAF8F5] text-[#1E2321] selection:bg-[#1B3B2B] selection:text-[#FAF8F5]">
+    <div className="relative min-h-screen bg-alabaster text-[#1E2321] selection:bg-forest selection:text-alabaster">
       {/* 1. Sticky Glassmorphic Navigation */}
       <Navbar onOpenAuditModal={() => setIsAuditModalOpen(true)} />
 
@@ -39,11 +39,11 @@ export default function LandingPage() {
         />
 
         {/* Dedicated Calculator Teaser Ribbon */}
-        <div className="border-y border-[#E6E0D4] bg-[#F2EFE9] py-5">
+        <div className="border-y border-[#E6E0D4] bg-sand py-5">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3 text-center sm:text-left">
-              <div className="w-9 h-9 rounded-xl bg-[#1B3B2B] text-white flex items-center justify-center shrink-0">
-                <Calculator className="w-4 h-4 text-[#C87D55]" />
+              <div className="w-9 h-9 rounded-xl bg-forest text-white flex items-center justify-center shrink-0">
+                <Calculator className="w-4 h-4 text-terracotta" />
               </div>
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#11261B]">
@@ -57,10 +57,10 @@ export default function LandingPage() {
 
             <Link
               href="/calculator"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FAF8F5] border border-[#DCD5C8] text-[#1B3B2B] text-xs font-semibold uppercase tracking-wider hover:bg-[#1B3B2B] hover:text-[#FAF8F5] transition-all shadow-xs group shrink-0"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-alabaster border border-[#DCD5C8] text-forest text-xs font-semibold uppercase tracking-wider hover:bg-forest hover:text-alabaster transition-all shadow-xs group shrink-0"
             >
               <span>Launch Live Calculator</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#C87D55] transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-3.5 h-3.5 text-terracotta transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>

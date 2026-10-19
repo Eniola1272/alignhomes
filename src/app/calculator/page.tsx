@@ -12,7 +12,7 @@ export default function CalculatorPage() {
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#1E2321] selection:bg-[#1B3B2B] selection:text-[#FAF8F5]">
+    <div className="min-h-screen bg-alabaster text-[#1E2321] selection:bg-forest selection:text-alabaster">
       <Navbar onOpenAuditModal={() => setIsAuditModalOpen(true)} />
 
       <main className="pt-32 pb-24 md:pt-40 md:pb-32">
@@ -21,7 +21,7 @@ export default function CalculatorPage() {
           <div className="mb-8">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#707D77] hover:text-[#1B3B2B] transition-colors"
+              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#707D77] hover:text-forest transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Back to Overview</span>
@@ -31,7 +31,7 @@ export default function CalculatorPage() {
           {/* Page Header */}
           <div className="max-w-3xl space-y-4 mb-12">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF0EC] border border-[#EBC8BA] text-xs font-semibold uppercase tracking-wider text-[#A34322]">
-              <AlertTriangle className="w-3.5 h-3.5 text-[#C87D55]" />
+              <AlertTriangle className="w-3.5 h-3.5 text-terracotta" />
               <span>Host Financial Model</span>
             </div>
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#11261B] leading-[1.15]">
@@ -54,14 +54,14 @@ export default function CalculatorPage() {
             {/* Explanatory Breakdown Card */}
             <div className="lg:col-span-5 space-y-6">
               {/* Fee Reality Card */}
-              <div className="rounded-2xl bg-[#F2EFE9] border border-[#E4DEC3] p-6 space-y-4 shadow-sm">
+              <div className="rounded-2xl bg-sand border border-[#E4DEC3] p-6 space-y-4 shadow-sm">
                 <h3 className="font-serif text-xl font-medium text-[#11261B] flex items-center gap-2">
-                  <DollarSign className="w-5 h-5 text-[#C87D55]" />
+                  <DollarSign className="w-5 h-5 text-terracotta" />
                   <span>Where Does the 15%–20% Go?</span>
                 </h3>
                 
                 <div className="space-y-3 text-xs text-[#55615C] leading-relaxed">
-                  <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#E0D9CC] space-y-1">
+                  <div className="p-3 rounded-xl bg-alabaster border border-[#E0D9CC] space-y-1">
                     <div className="font-semibold text-[#11261B] flex justify-between">
                       <span>3% Host Service Fee</span>
                       <span className="text-[#A34322] font-mono">Deducted from payout</span>
@@ -71,7 +71,7 @@ export default function CalculatorPage() {
                     </p>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#E0D9CC] space-y-1">
+                  <div className="p-3 rounded-xl bg-alabaster border border-[#E0D9CC] space-y-1">
                     <div className="font-semibold text-[#11261B] flex justify-between">
                       <span>14.2% Guest Service Fee</span>
                       <span className="text-[#A34322] font-mono">Added at checkout</span>
@@ -81,7 +81,7 @@ export default function CalculatorPage() {
                     </p>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#E0D9CC] space-y-1">
+                  <div className="p-3 rounded-xl bg-alabaster border border-[#E0D9CC] space-y-1">
                     <div className="font-semibold text-[#11261B] flex justify-between">
                       <span>Lost Guest CRM Data</span>
                       <span className="text-[#A34322] font-mono">100% Retained by OTA</span>
@@ -93,17 +93,17 @@ export default function CalculatorPage() {
                 </div>
 
                 <div className="pt-2 border-t border-[#E4DEC3]">
-                  <div className="flex items-center gap-2 text-xs text-[#115E3F] font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
+                  <div className="flex items-center gap-2 text-xs text-emerald-wealth font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-wealth" />
                     <span>With Alignhomes: 0% OTA cuts. You keep 100% of guest payments.</span>
                   </div>
                 </div>
               </div>
 
               {/* Direct Audit CTA Banner */}
-              <div className="rounded-2xl bg-[#1B3B2B] text-[#FAF8F5] p-6 space-y-4 shadow-lg shadow-[#1B3B2B]/15">
+              <div className="rounded-2xl bg-forest text-alabaster p-6 space-y-4 shadow-lg shadow-forest/15">
                 <div className="space-y-1">
-                  <div className="text-xs uppercase tracking-wider text-[#C87D55] font-semibold">
+                  <div className="text-xs uppercase tracking-wider text-terracotta font-semibold">
                     Free Technical Analysis
                   </div>
                   <h4 className="font-serif text-2xl font-bold text-white">
@@ -117,10 +117,10 @@ export default function CalculatorPage() {
 
                 <button
                   onClick={() => setIsAuditModalOpen(true)}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-[#FAF8F5] text-[#1B3B2B] text-xs font-semibold uppercase tracking-wider hover:bg-white transition-all shadow-md"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-alabaster text-forest text-xs font-semibold uppercase tracking-wider hover:bg-white transition-all shadow-md"
                 >
                   <span>Request My Direct Booking Roadmap</span>
-                  <ArrowRight className="w-4 h-4 text-[#C87D55]" />
+                  <ArrowRight className="w-4 h-4 text-terracotta" />
                 </button>
               </div>
             </div>

@@ -11,7 +11,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#121514] text-[#FAF8F5] pt-16 pb-12 border-t border-white/10">
+    <footer className="bg-obsidian text-alabaster pt-16 pb-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           {/* Brand Col */}
@@ -23,15 +23,15 @@ export function Footer() {
               Bespoke direct-booking engineering and custom PMS integrations for luxury vacation rentals
               and boutique hospitality portfolios worldwide.
             </p>
-            <div className="flex items-center gap-2 text-xs text-[#10B981] font-mono">
-              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
+            <div className="flex items-center gap-2 text-xs text-emerald-wealth font-mono">
+              <span className="w-2 h-2 rounded-full bg-emerald-wealth animate-pulse" />
               <span>All Systems Operational • 99.99% Uptime</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="md:col-span-2 space-y-3">
-            <div className="text-xs font-semibold uppercase tracking-wider text-[#C87D55]">
+            <div className="text-xs font-semibold uppercase tracking-wider text-terracotta">
               Architecture
             </div>
             <ul className="space-y-2 text-xs text-white/70">
@@ -60,7 +60,7 @@ export function Footer() {
 
           {/* Case Studies */}
           <div className="md:col-span-2 space-y-3">
-            <div className="text-xs font-semibold uppercase tracking-wider text-[#C87D55]">
+            <div className="text-xs font-semibold uppercase tracking-wider text-terracotta">
               Case Studies
             </div>
             <ul className="space-y-2 text-xs text-white/70">
@@ -89,7 +89,7 @@ export function Footer() {
 
           {/* Integrations */}
           <div className="md:col-span-3 space-y-3">
-            <div className="text-xs font-semibold uppercase tracking-wider text-[#C87D55]">
+            <div className="text-xs font-semibold uppercase tracking-wider text-terracotta">
               Supported Ecosystems
             </div>
             <p className="text-xs text-white/60 leading-relaxed">
@@ -99,7 +99,7 @@ export function Footer() {
             <div className="pt-1">
               <a
                 href="#audit-request"
-                className="inline-flex items-center gap-1.5 text-xs text-[#FAF8F5] underline decoration-[#C87D55] decoration-2 underline-offset-4 hover:text-[#C87D55] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs text-alabaster underline decoration-terracotta decoration-2 underline-offset-4 hover:text-terracotta transition-colors"
               >
                 Schedule an Architecture Audit →
               </a>

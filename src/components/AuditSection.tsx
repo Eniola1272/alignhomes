@@ -59,15 +59,15 @@ export function AuditSection() {
   };
 
   return (
-    <section id="audit-request" className="py-24 bg-[#FAF8F5] relative overflow-hidden">
+    <section id="audit-request" className="py-24 bg-alabaster relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
-        <div className="rounded-3xl bg-[#F2EFE9] border border-[#E6E0D4] p-8 sm:p-12 lg:p-16 shadow-2xl shadow-[#1B3B2B]/5 relative">
+        <div className="rounded-3xl bg-sand border border-[#E6E0D4] p-8 sm:p-12 lg:p-16 shadow-2xl shadow-forest/5 relative">
           {/* Subtle Decorative Gradient */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-[#C87D55]/10 via-[#1B3B2B]/5 to-transparent rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-linear-to-bl from-terracotta/10 via-forest/5 to-transparent rounded-full blur-2xl pointer-events-none" />
 
           <div className="relative z-10 max-w-2xl mx-auto text-center space-y-4 mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF8F5] border border-[#DDD6C8] text-xs font-semibold tracking-wider uppercase text-[#1B3B2B]">
-              <Sparkles className="w-3.5 h-3.5 text-[#C87D55]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-alabaster border border-[#DDD6C8] text-xs font-semibold tracking-wider uppercase text-forest">
+              <Sparkles className="w-3.5 h-3.5 text-terracotta" />
               <span>Complimentary Technical Architecture Review</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#11261B] tracking-tight">
@@ -91,7 +91,7 @@ export function AuditSection() {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="Elena Vance"
-                className="w-full px-4 py-3.5 rounded-xl bg-[#FAF8F5] border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-[#1B3B2B] focus:ring-1 focus:ring-[#1B3B2B] transition-colors"
+                className="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-colors"
               />
             </div>
 
@@ -105,7 +105,7 @@ export function AuditSection() {
                 value={formData.listingUrl}
                 onChange={(e) => setFormData({ ...formData, listingUrl: e.target.value })}
                 placeholder="https://airbnb.com/rooms/12345678 or your current domain"
-                className="w-full px-4 py-3.5 rounded-xl bg-[#FAF8F5] border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-[#1B3B2B] focus:ring-1 focus:ring-[#1B3B2B] transition-colors"
+                className="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-colors"
               />
             </div>
 
@@ -119,7 +119,7 @@ export function AuditSection() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="elena@luxuryretreats.com"
-                className="w-full px-4 py-3.5 rounded-xl bg-[#FAF8F5] border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-[#1B3B2B] focus:ring-1 focus:ring-[#1B3B2B] transition-colors"
+                className="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-colors"
               />
             </div>
 
@@ -131,7 +131,7 @@ export function AuditSection() {
                 <select
                   value={formData.portfolioSize}
                   onChange={(e) => setFormData({ ...formData, portfolioSize: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-[#FAF8F5] border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-[#1B3B2B] transition-colors cursor-pointer"
+                  className="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-forest transition-colors cursor-pointer"
                 >
                   <option>1-2 Luxury Properties</option>
                   <option>3-5 Boutique Doors</option>
@@ -147,7 +147,7 @@ export function AuditSection() {
                 <select
                   value={formData.currentPms}
                   onChange={(e) => setFormData({ ...formData, currentPms: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-[#FAF8F5] border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-[#1B3B2B] transition-colors cursor-pointer"
+                  className="w-full px-4 py-3.5 rounded-xl bg-alabaster border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-forest transition-colors cursor-pointer"
                 >
                   <option>Hostaway</option>
                   <option>Guesty</option>
@@ -161,14 +161,14 @@ export function AuditSection() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="w-full mt-4 flex items-center justify-center gap-2.5 py-4 px-6 rounded-xl bg-[#1B3B2B] text-[#FAF8F5] font-semibold text-sm tracking-wide uppercase shadow-lg shadow-[#1B3B2B]/20 hover:bg-[#224935] active:scale-[0.99] transition-all disabled:opacity-70"
+              className="w-full mt-4 flex items-center justify-center gap-2.5 py-4 px-6 rounded-xl bg-forest text-alabaster font-semibold text-sm tracking-wide uppercase shadow-lg shadow-forest/20 hover:bg-forest-hover active:scale-[0.99] transition-all disabled:opacity-70"
             >
               {status === "submitting" ? (
                 <span>Generating Blueprint...</span>
               ) : (
                 <>
                   <span>Send Me a Custom Direct-Booking Roadmap</span>
-                  <ArrowRight className="w-4 h-4 text-[#C87D55]" />
+                  <ArrowRight className="w-4 h-4 text-terracotta" />
                 </>
               )}
             </button>
@@ -177,15 +177,15 @@ export function AuditSection() {
           {/* Trust Guarantees */}
           <div className="relative z-10 max-w-xl mx-auto mt-8 pt-6 border-t border-[#E3DDCF] flex flex-wrap items-center justify-between text-xs text-[#707D77] gap-3">
             <div className="flex items-center gap-1.5">
-              <Lock className="w-3.5 h-3.5 text-[#1B3B2B]" />
+              <Lock className="w-3.5 h-3.5 text-forest" />
               <span>100% Confidential & Private</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#10B981]" />
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-wealth" />
               <span>Delivered within 24 Hours</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#C87D55]" />
+              <Sparkles className="w-3.5 h-3.5 text-terracotta" />
               <span>Reviewed by Senior Engineers</span>
             </div>
           </div>
@@ -195,7 +195,7 @@ export function AuditSection() {
       {/* Generated Instant Roadmap Modal */}
       {showRoadmapModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="relative w-full max-w-2xl rounded-3xl bg-[#FAF8F5] border border-[#E6E0D4] p-7 sm:p-9 shadow-2xl space-y-6">
+          <div className="relative w-full max-w-2xl rounded-3xl bg-alabaster border border-[#E6E0D4] p-7 sm:p-9 shadow-2xl space-y-6">
             <div className="text-center space-y-2">
               <div className="w-12 h-12 rounded-full bg-[#EBF5EF] text-[#115E3F] flex items-center justify-center mx-auto">
                 <CheckCircle2 className="w-6 h-6" />
@@ -205,7 +205,7 @@ export function AuditSection() {
               </h3>
               <p className="text-sm text-[#55615C]">
                 We have queued your listing (
-                <span className="font-mono text-xs text-[#1B3B2B] font-semibold truncate max-w-xs inline-block align-bottom">
+                <span className="font-mono text-xs text-forest font-semibold truncate max-w-xs inline-block align-bottom">
                   {formData.listingUrl}
                 </span>
                 ) for manual inspection by our engineering team.
@@ -213,23 +213,23 @@ export function AuditSection() {
             </div>
 
             {/* Simulated Live Roadmap Summary */}
-            <div className="rounded-2xl bg-[#F2EFE9] border border-[#E3DDCF] p-5 space-y-4">
-              <div className="text-xs font-semibold uppercase tracking-wider text-[#C87D55]">
+            <div className="rounded-2xl bg-sand border border-[#E3DDCF] p-5 space-y-4">
+              <div className="text-xs font-semibold uppercase tracking-wider text-terracotta">
                 Preliminary System Architecture:
               </div>
 
               <div className="space-y-2 text-xs text-[#333E39]">
-                <div className="flex items-center justify-between p-2 rounded-lg bg-[#FAF8F5] border border-[#E8E2D7]">
+                <div className="flex items-center justify-between p-2 rounded-lg bg-alabaster border border-[#E8E2D7]">
                   <span>Target Frontend Framework</span>
-                  <span className="font-mono font-semibold text-[#1B3B2B]">Next.js 14 App Router + Vercel Edge</span>
+                  <span className="font-mono font-semibold text-forest">Next.js 14 App Router + Vercel Edge</span>
                 </div>
-                <div className="flex items-center justify-between p-2 rounded-lg bg-[#FAF8F5] border border-[#E8E2D7]">
+                <div className="flex items-center justify-between p-2 rounded-lg bg-alabaster border border-[#E8E2D7]">
                   <span>Sync Pipeline</span>
-                  <span className="font-mono font-semibold text-[#1B3B2B]">{formData.currentPms} Bi-Directional Webhooks</span>
+                  <span className="font-mono font-semibold text-forest">{formData.currentPms} Bi-Directional Webhooks</span>
                 </div>
-                <div className="flex items-center justify-between p-2 rounded-lg bg-[#FAF8F5] border border-[#E8E2D7]">
+                <div className="flex items-center justify-between p-2 rounded-lg bg-alabaster border border-[#E8E2D7]">
                   <span>Payment Gateway</span>
-                  <span className="font-mono font-semibold text-[#1B3B2B]">Stripe Elements + Pre-Auth Deposits</span>
+                  <span className="font-mono font-semibold text-forest">Stripe Elements + Pre-Auth Deposits</span>
                 </div>
                 <div className="flex items-center justify-between p-2 rounded-lg bg-[#EBF5EF] border border-[#BFDFCD] text-[#115E3F] font-semibold">
                   <span>Projected Annual Fee Reclaim</span>
@@ -246,7 +246,7 @@ export function AuditSection() {
             <div className="flex justify-center">
               <button
                 onClick={() => setShowRoadmapModal(false)}
-                className="px-6 py-2.5 rounded-full bg-[#1B3B2B] text-white text-xs font-semibold tracking-wider uppercase hover:bg-[#224935] transition-colors"
+                className="px-6 py-2.5 rounded-full bg-forest text-white text-xs font-semibold tracking-wider uppercase hover:bg-forest-hover transition-colors"
               >
                 Close & Return to Site
               </button>

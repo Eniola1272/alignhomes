@@ -26,12 +26,12 @@ export function ReceiptComparison() {
   const guestSavings = otaTotalGuestPays - directTotalGuestPays;
 
   return (
-    <section className="py-24 bg-[#FAF8F5] border-t border-[#E6E0D4] relative">
+    <section className="py-24 bg-alabaster border-t border-[#E6E0D4] relative">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EFE9] border border-[#DDD6C8] text-xs font-semibold tracking-wider uppercase text-[#1B3B2B]">
-            <Sparkles className="w-3.5 h-3.5 text-[#C87D55]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sand border border-[#DDD6C8] text-xs font-semibold tracking-wider uppercase text-forest">
+            <Sparkles className="w-3.5 h-3.5 text-terracotta" />
             <span>The Win-Win Economics</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#11261B]">
@@ -44,7 +44,7 @@ export function ReceiptComparison() {
         </div>
 
         {/* Rate Selector */}
-        <div className="max-w-md mx-auto mb-12 p-4 rounded-2xl bg-[#F2EFE9] border border-[#E3DDCF] flex items-center justify-between gap-4">
+        <div className="max-w-md mx-auto mb-12 p-4 rounded-2xl bg-sand border border-[#E3DDCF] flex items-center justify-between gap-4">
           <span className="text-xs font-semibold uppercase tracking-wider text-[#4A534F]">
             Test Nightly Rate:
           </span>
@@ -55,8 +55,8 @@ export function ReceiptComparison() {
                 onClick={() => setNightlyRate(rate)}
                 className={`py-1.5 px-3 rounded-xl text-xs font-bold font-mono transition-all ${
                   nightlyRate === rate
-                    ? "bg-[#1B3B2B] text-white shadow-xs"
-                    : "bg-[#FAF8F5] text-[#4A534F] border border-[#DCD5C8] hover:border-[#1B3B2B]"
+                    ? "bg-forest text-white shadow-xs"
+                    : "bg-alabaster text-[#4A534F] border border-[#DCD5C8] hover:border-forest"
                 }`}
               >
                 ${rate}
@@ -68,7 +68,7 @@ export function ReceiptComparison() {
         {/* Side-by-Side Receipt Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* LEFT: The Airbnb Receipt */}
-          <div className="rounded-3xl bg-[#FAF8F5] border-2 border-red-200/80 p-7 sm:p-9 shadow-lg relative flex flex-col justify-between">
+          <div className="rounded-3xl bg-alabaster border-2 border-red-200/80 p-7 sm:p-9 shadow-lg relative flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-red-100 mb-6">
                 <div className="flex items-center gap-2">
@@ -110,7 +110,7 @@ export function ReceiptComparison() {
                   </span>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-[#F2EFE9] border border-[#E3DDCF] space-y-1 text-xs font-mono">
+                <div className="p-3.5 rounded-xl bg-sand border border-[#E3DDCF] space-y-1 text-xs font-mono">
                   <div className="flex justify-between text-[#707D77]">
                     <span>Host 3% Platform Deduction:</span>
                     <span className="text-red-500">-${otaHostCut.toLocaleString()}</span>
@@ -130,16 +130,16 @@ export function ReceiptComparison() {
           </div>
 
           {/* RIGHT: The Alignhomes Direct Channel Receipt */}
-          <div className="rounded-3xl bg-[#FAF8F5] border-2 border-[#10B981]/70 p-7 sm:p-9 shadow-xl relative flex flex-col justify-between ring-4 ring-[#10B981]/10">
+          <div className="rounded-3xl bg-alabaster border-2 border-emerald-wealth/70 p-7 sm:p-9 shadow-xl relative flex flex-col justify-between ring-4 ring-emerald-wealth/10">
             {/* Best Value Badge */}
-            <div className="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-[#10B981] text-white text-[10px] font-bold uppercase tracking-wider shadow-sm">
+            <div className="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-emerald-wealth text-white text-[10px] font-bold uppercase tracking-wider shadow-sm">
               Maximum Profit Channel
             </div>
 
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-[#BFDFCD]/60 mb-6">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-[#10B981]" />
+                  <div className="w-3 h-3 rounded-full bg-emerald-wealth" />
                   <span className="text-xs font-bold uppercase tracking-wider text-[#115E3F]">
                     Your Alignhomes Direct Channel
                   </span>
@@ -160,7 +160,7 @@ export function ReceiptComparison() {
                 </div>
                 <div className="flex justify-between text-[#115E3F] font-semibold p-2.5 rounded-xl bg-[#EBF5EF] border border-[#BFDFCD]">
                   <span className="flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-[#10B981]" />
+                    <Sparkles className="w-3.5 h-3.5 text-emerald-wealth" />
                     <span>Direct Courtesy Guest VIP Perk (5% Off)</span>
                   </span>
                   <span>-${directGuestDiscount.toLocaleString()}</span>
@@ -176,7 +176,7 @@ export function ReceiptComparison() {
                     <span className="font-serif text-2xl font-bold text-[#115E3F]">
                       ${directTotalGuestPays.toLocaleString()}
                     </span>
-                    <span className="block text-[11px] text-[#10B981] font-sans font-semibold">
+                    <span className="block text-[11px] text-emerald-wealth font-sans font-semibold">
                       (Guest saves ${guestSavings.toLocaleString()} vs. Airbnb)
                     </span>
                   </div>

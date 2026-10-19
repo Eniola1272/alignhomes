@@ -42,17 +42,17 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
   };
 
   return (
-    <div className="relative rounded-2xl bg-[#F2EFE9] border border-[#E4DEC3]/50 p-6 md:p-8 shadow-2xl shadow-[#1B3B2B]/5 backdrop-blur-xl">
+    <div className="relative rounded-2xl bg-sand border border-[#E4DEC3]/50 p-6 md:p-8 shadow-2xl shadow-forest/5 backdrop-blur-xl">
       {/* Decorative top accent badge */}
       <div className="flex items-center justify-between pb-5 border-b border-[#E3DDCF]">
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#C87D55] animate-pulse" />
-          <span className="text-xs font-semibold tracking-wider uppercase text-[#1B3B2B]/80 font-sans">
+          <span className="w-2.5 h-2.5 rounded-full bg-terracotta animate-pulse" />
+          <span className="text-xs font-semibold tracking-wider uppercase text-forest/80 font-sans">
             Live OTA Bleed Model
           </span>
         </div>
-        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FAF8F5] border border-[#E3DDCF] text-[11px] font-medium text-[#1B3B2B]">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#1B3B2B]" />
+        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-alabaster border border-[#E3DDCF] text-[11px] font-medium text-forest">
+          <ShieldCheck className="w-3.5 h-3.5 text-forest" />
           <span>Real-time Host Metrics</span>
         </div>
       </div>
@@ -65,7 +65,7 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
             <label className="text-xs font-semibold uppercase tracking-wider text-[#4A534F]">
               Average Nightly Rate (ADR)
             </label>
-            <span className="font-serif text-xl font-bold text-[#1B3B2B]">
+            <span className="font-serif text-xl font-bold text-forest">
               ${nightlyRate.toLocaleString()}
               <span className="text-xs font-normal text-[#6B7771] font-sans"> / night</span>
             </span>
@@ -78,7 +78,7 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
               step={25}
               value={nightlyRate}
               onChange={(e) => setNightlyRate(Number(e.target.value))}
-              className="w-full accent-[#1B3B2B]"
+              className="w-full accent-forest"
               aria-label="Average Nightly Rate"
             />
           </div>
@@ -95,7 +95,7 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
             <label className="text-xs font-semibold uppercase tracking-wider text-[#4A534F]">
               Booked Nights Per Year
             </label>
-            <span className="font-serif text-xl font-bold text-[#1B3B2B]">
+            <span className="font-serif text-xl font-bold text-forest">
               {bookedNights}
               <span className="text-xs font-normal text-[#6B7771] font-sans"> nights ({(bookedNights / 3.65).toFixed(0)}% occ)</span>
             </span>
@@ -108,7 +108,7 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
               step={5}
               value={bookedNights}
               onChange={(e) => setBookedNights(Number(e.target.value))}
-              className="w-full accent-[#1B3B2B]"
+              className="w-full accent-forest"
               aria-label="Booked Nights Per Year"
             />
           </div>
@@ -123,7 +123,7 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
         <div className="pt-2">
           <div className="flex items-center justify-between text-xs font-semibold text-[#4A534F] uppercase tracking-wider mb-2">
             <span className="flex items-center gap-1.5">
-              <Building2 className="w-3.5 h-3.5 text-[#C87D55]" />
+              <Building2 className="w-3.5 h-3.5 text-terracotta" />
               Portfolio Size
             </span>
             <span className="text-[11px] text-[#6B7771] lowercase font-normal">
@@ -138,8 +138,8 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
                 onClick={() => setPropertyCount(count)}
                 className={`py-1.5 text-xs font-medium rounded-lg border transition-all duration-200 ${
                   propertyCount === count
-                    ? "bg-[#1B3B2B] text-[#FAF8F5] border-[#1B3B2B] shadow-sm"
-                    : "bg-[#FAF8F5] text-[#4A534F] border-[#E3DDCF] hover:border-[#C87D55]/60"
+                    ? "bg-forest text-alabaster border-forest shadow-sm"
+                    : "bg-alabaster text-[#4A534F] border-[#E3DDCF] hover:border-terracotta/60"
                 }`}
               >
                 {count === 8 ? "8+ Doors" : `${count} ${count === 1 ? "Home" : "Homes"}`}
@@ -150,10 +150,10 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
       </div>
 
       {/* Financial Results Display Card */}
-      <div className="mt-7 rounded-xl bg-[#FAF8F5] border border-[#E3DDCF] p-5 space-y-4 shadow-sm">
+      <div className="mt-7 rounded-xl bg-alabaster border border-[#E3DDCF] p-5 space-y-4 shadow-sm">
         <div className="flex items-center justify-between text-xs text-[#6B7771] pb-2 border-b border-[#ECE7DC]">
           <span>Gross Annual Revenue</span>
-          <span className="font-semibold text-[#1B3B2B] font-mono text-sm">
+          <span className="font-semibold text-forest font-mono text-sm">
             {formatCurrency(grossAnnualRevenue)}
           </span>
         </div>
@@ -162,7 +162,7 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
         <div className="flex items-center justify-between p-3.5 rounded-lg bg-[#FAF0EC] border border-[#EBC8BA]/70">
           <div>
             <span className="text-xs font-semibold text-[#A34322] flex items-center gap-1.5 uppercase tracking-wide">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C87D55]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-terracotta" />
               Annual 15% OTA Fee Lost
             </span>
             <p className="text-[11px] text-[#8C482C] mt-0.5">
@@ -180,7 +180,7 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
         <div className="flex items-center justify-between p-4 rounded-lg bg-[#EBF5EF] border border-[#BFDFCD]/80">
           <div>
             <span className="text-xs font-bold text-[#115E3F] flex items-center gap-1.5 uppercase tracking-wider">
-              <TrendingUp className="w-4 h-4 text-[#10B981]" />
+              <TrendingUp className="w-4 h-4 text-emerald-wealth" />
               5-Year Wealth Retained
             </span>
             <p className="text-[11px] text-[#196B48] mt-0.5">
@@ -199,10 +199,10 @@ export function OTACalculator({ onReclaimClick }: OTACalculatorProps) {
       <button
         onClick={handleReclaim}
         type="button"
-        className="w-full mt-6 group relative flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-[#1B3B2B] text-[#FAF8F5] font-medium text-sm tracking-wide shadow-lg shadow-[#1B3B2B]/20 hover:bg-[#224935] active:scale-[0.99] transition-all duration-200"
+        className="w-full mt-6 group relative flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-forest text-alabaster font-medium text-sm tracking-wide shadow-lg shadow-forest/20 hover:bg-forest-hover active:scale-[0.99] transition-all duration-200"
       >
         <span>Reclaim This Revenue</span>
-        <ArrowRight className="w-4 h-4 text-[#C87D55] transition-transform duration-300 group-hover:translate-x-1.5" />
+        <ArrowRight className="w-4 h-4 text-terracotta transition-transform duration-300 group-hover:translate-x-1.5" />
       </button>
 
       <p className="text-center text-[11px] text-[#7A8681] mt-3">

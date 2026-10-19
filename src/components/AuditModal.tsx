@@ -57,10 +57,10 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg rounded-3xl bg-[#FAF8F5] border border-[#E6E0D4] p-6 sm:p-8 shadow-2xl space-y-6">
+      <div className="relative w-full max-w-lg rounded-3xl bg-alabaster border border-[#E6E0D4] p-6 sm:p-8 shadow-2xl space-y-6">
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-[#F2EFE9] text-[#1B3B2B] hover:bg-[#E8E2D7] transition-colors"
+          className="absolute top-5 right-5 p-2 rounded-full bg-sand text-forest hover:bg-[#E8E2D7] transition-colors"
           aria-label="Close Modal"
         >
           <X className="w-5 h-5" />
@@ -85,7 +85,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
             <div className="pt-2">
               <button
                 onClick={onClose}
-                className="px-6 py-2.5 rounded-full bg-[#1B3B2B] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#224935] transition-colors"
+                className="px-6 py-2.5 rounded-full bg-forest text-white text-xs font-semibold uppercase tracking-wider hover:bg-forest-hover transition-colors"
               >
                 Close
               </button>
@@ -94,8 +94,8 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
         ) : (
           <>
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F2EFE9] border border-[#E3DDCF] text-[11px] font-semibold uppercase text-[#1B3B2B] mb-2">
-                <Sparkles className="w-3 h-3 text-[#C87D55]" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sand border border-[#E3DDCF] text-[11px] font-semibold uppercase text-forest mb-2">
+                <Sparkles className="w-3 h-3 text-terracotta" />
                 <span>Complimentary Host Audit</span>
               </div>
               <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#11261B]">
@@ -117,7 +117,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Elena Vance"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-[#1B3B2B]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-forest"
                 />
               </div>
 
@@ -131,7 +131,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                   value={formData.listingUrl}
                   onChange={(e) => setFormData({ ...formData, listingUrl: e.target.value })}
                   placeholder="https://airbnb.com/rooms/..."
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-[#1B3B2B]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-forest"
                 />
               </div>
 
@@ -145,7 +145,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="elena@luxuryvillas.com"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-[#1B3B2B]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-forest"
                 />
               </div>
 
@@ -156,7 +156,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                 <select
                   value={formData.pms}
                   onChange={(e) => setFormData({ ...formData, pms: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-[#1B3B2B]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-[#DCD5C8] text-[#1E2321] text-sm focus:outline-none focus:border-forest"
                 >
                   <option>Hostaway</option>
                   <option>Guesty</option>
@@ -169,25 +169,25 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-[#1B3B2B] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#224935] transition-all disabled:opacity-70 mt-2 shadow-md"
+                className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-forest text-white text-xs font-semibold uppercase tracking-wider hover:bg-forest-hover transition-all disabled:opacity-70 mt-2 shadow-md"
               >
                 {status === "submitting" ? (
                   <span>Analyzing Listing...</span>
                 ) : (
                   <>
                     <span>Generate My Direct-Booking Blueprint</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#C87D55]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-terracotta" />
                   </>
                 )}
               </button>
 
               <div className="flex items-center justify-center gap-3 text-[11px] text-[#78857F] pt-2">
                 <span className="flex items-center gap-1">
-                  <Lock className="w-3 h-3 text-[#1B3B2B]" /> 100% Confidential
+                  <Lock className="w-3 h-3 text-forest" /> 100% Confidential
                 </span>
                 <span>•</span>
                 <span className="flex items-center gap-1">
-                  <ShieldCheck className="w-3 h-3 text-[#10B981]" /> 24h Turnaround
+                  <ShieldCheck className="w-3 h-3 text-emerald-wealth" /> 24h Turnaround
                 </span>
               </div>
             </form>

@@ -48,7 +48,7 @@ export function AlignhomesLogo({
         <span
           className={`font-sans tracking-tight font-medium ${
             size === "sm" ? "text-lg" : size === "lg" ? "text-2xl" : "text-xl"
-          } ${inverted ? "text-[#FAF8F5]" : "text-[#1B3B2B]"}`}
+          } ${inverted ? "text-alabaster" : "text-forest"}`}
           style={{ letterSpacing: "-0.03em" }}
         >
           Alignhomes

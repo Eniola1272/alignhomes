@@ -96,18 +96,18 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#FAF8F5] border border-[#E6E0D4] p-6 sm:p-9 shadow-2xl space-y-6">
+      <div className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-3xl bg-alabaster border border-[#E6E0D4] p-6 sm:p-9 shadow-2xl space-y-6">
         {/* Header & Close */}
         <div className="flex items-center justify-between pb-4 border-b border-[#E7E1D4]">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#1B3B2B] font-mono">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-wealth animate-pulse" />
+            <span className="text-xs font-semibold uppercase tracking-wider text-forest font-mono">
               Live Guest Booking Experience Demo
             </span>
           </div>
           <button
             onClick={resetModal}
-            className="p-1.5 rounded-full bg-[#F2EFE9] text-[#1B3B2B] hover:bg-[#E8E2D7] transition-colors"
+            className="p-1.5 rounded-full bg-sand text-forest hover:bg-[#E8E2D7] transition-colors"
             aria-label="Close"
           >
             <X className="w-5 h-5" />
@@ -115,7 +115,7 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
         </div>
 
         {/* Property Mini Header */}
-        <div className="flex items-center gap-4 p-3.5 rounded-2xl bg-[#F2EFE9] border border-[#E3DDCF]">
+        <div className="flex items-center gap-4 p-3.5 rounded-2xl bg-sand border border-[#E3DDCF]">
           <div className="relative w-16 h-16 rounded-xl overflow-hidden shrink-0">
             <Image
               src="/images/hero_villa.jpg"
@@ -125,7 +125,7 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
             />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="text-xs uppercase tracking-wider text-[#C87D55] font-semibold">
+            <div className="text-xs uppercase tracking-wider text-terracotta font-semibold">
               Live Direct Engine
             </div>
             <h4 className="font-serif text-lg font-bold text-[#11261B] truncate">
@@ -159,8 +159,8 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
                     onClick={() => setNights(n)}
                     className={`py-2.5 px-3 rounded-xl border text-xs font-semibold transition-all ${
                       nights === n
-                        ? "bg-[#1B3B2B] text-white border-[#1B3B2B] shadow-xs"
-                        : "bg-[#FAF8F5] text-[#4A534F] border-[#DCD5C8] hover:border-[#1B3B2B]/40"
+                        ? "bg-forest text-white border-forest shadow-xs"
+                        : "bg-alabaster text-[#4A534F] border-[#DCD5C8] hover:border-forest/40"
                     }`}
                   >
                     {n} Nights
@@ -169,7 +169,7 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E0D9CC] space-y-2 text-xs">
+            <div className="p-4 rounded-2xl bg-alabaster border border-[#E0D9CC] space-y-2 text-xs">
               <div className="flex justify-between">
                 <span className="text-[#55615C]">${nightlyRate} × {nights} nights</span>
                 <span className="font-mono font-medium text-[#11261B]">${basePrice.toLocaleString()}</span>
@@ -186,10 +186,10 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
 
             <button
               onClick={() => setStep("addons")}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-[#1B3B2B] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#224935] transition-all shadow-md"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-forest text-white text-xs font-semibold uppercase tracking-wider hover:bg-forest-hover transition-all shadow-md"
             >
               <span>Next: Concierge Add-ons (High Margin Revenue)</span>
-              <ArrowRight className="w-4 h-4 text-[#C87D55]" />
+              <ArrowRight className="w-4 h-4 text-terracotta" />
             </button>
           </div>
         )}
@@ -216,14 +216,14 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
                     onClick={() => toggleAddon(addon.id)}
                     className={`cursor-pointer p-3.5 rounded-2xl border transition-all flex items-center justify-between gap-3 ${
                       isSelected
-                        ? "bg-[#FAF8F5] border-[#1B3B2B] ring-1 ring-[#1B3B2B]"
-                        : "bg-[#FAF8F5] border-[#E0D9CC] hover:border-[#C87D55]/60"
+                        ? "bg-alabaster border-forest ring-1 ring-forest"
+                        : "bg-alabaster border-[#E0D9CC] hover:border-terracotta/60"
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div
                         className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
-                          isSelected ? "bg-[#1B3B2B] text-white" : "bg-[#F2EFE9] text-[#1B3B2B]"
+                          isSelected ? "bg-forest text-white" : "bg-sand text-forest"
                         }`}
                       >
                         <Icon className="w-4 h-4" />
@@ -237,7 +237,7 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
                       <span className="font-mono text-xs font-bold text-[#11261B]">
                         +${addon.price}
                       </span>
-                      <div className="text-[10px] text-[#10B981] font-medium">
+                      <div className="text-[10px] text-emerald-wealth font-medium">
                         {isSelected ? "Selected ✓" : "Tap to add"}
                       </div>
                     </div>
@@ -249,16 +249,16 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
             <div className="flex gap-3">
               <button
                 onClick={() => setStep("details")}
-                className="py-3 px-4 rounded-xl border border-[#DCD5C8] text-xs font-semibold text-[#4A534F] hover:bg-[#F2EFE9]"
+                className="py-3 px-4 rounded-xl border border-[#DCD5C8] text-xs font-semibold text-[#4A534F] hover:bg-sand"
               >
                 Back
               </button>
               <button
                 onClick={() => setStep("payment")}
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#1B3B2B] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#224935] transition-all shadow-md"
+                className="flex-1 flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-forest text-white text-xs font-semibold uppercase tracking-wider hover:bg-forest-hover transition-all shadow-md"
               >
                 <span>Continue to Checkout Schedule</span>
-                <ArrowRight className="w-4 h-4 text-[#C87D55]" />
+                <ArrowRight className="w-4 h-4 text-terracotta" />
               </button>
             </div>
           </div>
@@ -283,8 +283,8 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
                 onClick={() => setPaymentOption("split")}
                 className={`p-3 rounded-xl border text-left transition-all ${
                   paymentOption === "split"
-                    ? "bg-[#1B3B2B] text-white border-[#1B3B2B] shadow-xs"
-                    : "bg-[#FAF8F5] text-[#4A534F] border-[#DCD5C8]"
+                    ? "bg-forest text-white border-forest shadow-xs"
+                    : "bg-alabaster text-[#4A534F] border-[#DCD5C8]"
                 }`}
               >
                 <div className="text-xs font-bold">50 / 50 Split Schedule</div>
@@ -298,8 +298,8 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
                 onClick={() => setPaymentOption("full")}
                 className={`p-3 rounded-xl border text-left transition-all ${
                   paymentOption === "full"
-                    ? "bg-[#1B3B2B] text-white border-[#1B3B2B] shadow-xs"
-                    : "bg-[#FAF8F5] text-[#4A534F] border-[#DCD5C8]"
+                    ? "bg-forest text-white border-forest shadow-xs"
+                    : "bg-alabaster text-[#4A534F] border-[#DCD5C8]"
                 }`}
               >
                 <div className="text-xs font-bold">100% Upfront</div>
@@ -310,7 +310,7 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
             </div>
 
             {/* Breakdown Box */}
-            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E0D9CC] space-y-2 text-xs">
+            <div className="p-4 rounded-2xl bg-alabaster border border-[#E0D9CC] space-y-2 text-xs">
               <div className="flex justify-between">
                 <span className="text-[#55615C]">Total Stay Amount (incl. cleaning & extras):</span>
                 <span className="font-mono font-bold text-[#11261B]">${totalAmount.toLocaleString()}</span>
@@ -333,7 +333,7 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
 
             {/* Damage Hold Pre-Auth Notice */}
             <div className="p-3 rounded-xl bg-[#EBF5EF] border border-[#BFDFCD] flex items-start gap-2.5 text-xs text-[#115E3F]">
-              <ShieldCheck className="w-4 h-4 text-[#10B981] shrink-0 mt-0.5" />
+              <ShieldCheck className="w-4 h-4 text-emerald-wealth shrink-0 mt-0.5" />
               <div>
                 <strong className="block font-semibold">Hotel-Grade Damage Protection Active</strong>
                 <span>A $1,500 security hold is placed on the guest card 24h prior to check-in and releases automatically 72h post-checkout.</span>
@@ -343,13 +343,13 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
             <div className="flex gap-3">
               <button
                 onClick={() => setStep("addons")}
-                className="py-3 px-4 rounded-xl border border-[#DCD5C8] text-xs font-semibold text-[#4A534F] hover:bg-[#F2EFE9]"
+                className="py-3 px-4 rounded-xl border border-[#DCD5C8] text-xs font-semibold text-[#4A534F] hover:bg-sand"
               >
                 Back
               </button>
               <button
                 onClick={handleCompleteDemo}
-                className="flex-1 flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-[#1B3B2B] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#224935] transition-all shadow-md"
+                className="flex-1 flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-forest text-white text-xs font-semibold uppercase tracking-wider hover:bg-forest-hover transition-all shadow-md"
               >
                 <Apple className="w-4 h-4" />
                 <span>Simulate 1-Click Apple Pay Booking</span>
@@ -366,7 +366,7 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
             </div>
 
             <div className="space-y-1">
-              <div className="text-xs uppercase tracking-wider text-[#10B981] font-bold">
+              <div className="text-xs uppercase tracking-wider text-emerald-wealth font-bold">
                 Direct Booking Completed
               </div>
               <h3 className="font-serif text-3xl font-bold text-[#11261B]">
@@ -379,22 +379,22 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
             </div>
 
             {/* Instant Channel Sync Visual Confirmation */}
-            <div className="rounded-2xl bg-[#121514] p-4 text-white text-left space-y-2.5 max-w-md mx-auto text-xs">
+            <div className="rounded-2xl bg-obsidian p-4 text-white text-left space-y-2.5 max-w-md mx-auto text-xs">
               <div className="flex items-center justify-between text-white/50 text-[11px] pb-1 border-b border-white/10">
                 <span>Real-Time Channel Manager Broadcast</span>
-                <span className="text-[#10B981] font-mono">380ms Latency</span>
+                <span className="text-emerald-wealth font-mono">380ms Latency</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Airbnb Calendar:</span>
-                <span className="text-[#10B981] font-mono font-semibold">Dates Blocked Automatically ✓</span>
+                <span className="text-emerald-wealth font-mono font-semibold">Dates Blocked Automatically ✓</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Vrbo Calendar:</span>
-                <span className="text-[#10B981] font-mono font-semibold">Dates Blocked Automatically ✓</span>
+                <span className="text-emerald-wealth font-mono font-semibold">Dates Blocked Automatically ✓</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Host Payout (Stripe):</span>
-                <span className="text-[#FAF8F5] font-mono font-semibold">Deposited Directly into Your Bank ✓</span>
+                <span className="text-alabaster font-mono font-semibold">Deposited Directly into Your Bank ✓</span>
               </div>
             </div>
 
@@ -405,13 +405,13 @@ export function BookingDemoModal({ isOpen, onClose }: BookingDemoModalProps) {
                   const el = document.getElementById("audit-request");
                   if (el) el.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#1B3B2B] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#224935] transition-all shadow-md"
+                className="w-full sm:w-auto px-6 py-3 rounded-full bg-forest text-white text-xs font-semibold uppercase tracking-wider hover:bg-forest-hover transition-all shadow-md"
               >
                 Request This Architecture for My Property →
               </button>
               <button
                 onClick={resetModal}
-                className="text-xs text-[#707D77] hover:text-[#1B3B2B] underline"
+                className="text-xs text-[#707D77] hover:text-forest underline"
               >
                 Close Preview
               </button>

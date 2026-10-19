@@ -56,12 +56,12 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-[#F2EFE9] border-t border-[#E6E0D4] relative scroll-mt-20">
+    <section id="faq" className="py-24 bg-sand border-t border-[#E6E0D4] relative scroll-mt-20">
       <div className="max-w-4xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div className="text-center space-y-3 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#DDD6C8] text-xs font-semibold tracking-wider uppercase text-[#1B3B2B]">
-            <HelpCircle className="w-3.5 h-3.5 text-[#C87D55]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-alabaster border border-[#DDD6C8] text-xs font-semibold tracking-wider uppercase text-forest">
+            <HelpCircle className="w-3.5 h-3.5 text-terracotta" />
             <span>Common Host Inquiries</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#11261B]">
@@ -80,7 +80,7 @@ export function FAQSection() {
             return (
               <div
                 key={faq.question}
-                className="rounded-2xl bg-[#FAF8F5] border border-[#E3DDCF] overflow-hidden transition-all duration-200 hover:border-[#1B3B2B]/30"
+                className="rounded-2xl bg-alabaster border border-[#E3DDCF] overflow-hidden transition-all duration-200 hover:border-forest/30"
               >
                 <button
                   type="button"
@@ -88,7 +88,7 @@ export function FAQSection() {
                   className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer"
                 >
                   <div className="space-y-1">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#C87D55] font-semibold">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-terracotta font-semibold">
                       {faq.tag}
                     </span>
                     <h3 className="font-serif text-lg sm:text-xl font-medium text-[#11261B]">
@@ -96,8 +96,8 @@ export function FAQSection() {
                     </h3>
                   </div>
                   <div
-                    className={`w-8 h-8 rounded-full bg-[#F2EFE9] flex items-center justify-center shrink-0 transition-transform duration-200 text-[#1B3B2B] ${
-                      isOpen ? "rotate-180 bg-[#1B3B2B] text-white" : ""
+                    className={`w-8 h-8 rounded-full bg-sand flex items-center justify-center shrink-0 transition-transform duration-200 text-forest ${
+                      isOpen ? "rotate-180 bg-forest text-white" : ""
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -105,7 +105,7 @@ export function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm text-[#55615C] leading-relaxed border-t border-[#F2EFE9] animate-in fade-in duration-200">
+                  <div className="px-6 pb-6 pt-1 text-sm text-[#55615C] leading-relaxed border-t border-sand animate-in fade-in duration-200">
                     <p>{faq.answer}</p>
                   </div>
                 )}
@@ -115,7 +115,7 @@ export function FAQSection() {
         </div>
 
         {/* Bottom prompt */}
-        <div className="mt-12 text-center p-6 rounded-2xl bg-[#FAF8F5] border border-[#E3DDCF] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 text-center p-6 rounded-2xl bg-alabaster border border-[#E3DDCF] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left">
             <h4 className="font-serif text-lg font-bold text-[#11261B]">
               Have a specific PMS or custom setup question?
@@ -126,7 +126,7 @@ export function FAQSection() {
           </div>
           <a
             href="#audit-request"
-            className="whitespace-nowrap px-5 py-2.5 rounded-full bg-[#1B3B2B] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#224935] transition-colors shrink-0"
+            className="whitespace-nowrap px-5 py-2.5 rounded-full bg-forest text-white text-xs font-semibold uppercase tracking-wider hover:bg-forest-hover transition-colors shrink-0"
           >
             Ask in Your Free Audit →
           </a>
