@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-alabaster: #FAF8F5;
+  --color-sand: #F2EFE9;
+  --color-obsidian: #121514;
+  --color-obsidian-card: #181C1B;
+  --color-obsidian-border: rgba(255, 255, 255, 0.08);
+  
+  --color-forest: #1B3B2B;
+  --color-forest-hover: #224935;
+  --color-forest-dark: #10241A;
+  --color-forest-tint: #EDF3F0;
+  
+  --color-terracotta: #C87D55;
+  --color-terracotta-hover: #D88960;
+  --color-terracotta-tint: #F8F2ED;
+
+  --color-emerald-wealth: #10B981;
+  --color-border-subtle: #E6E1D8;
+
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+:root {
+  --font-playfair: 'Playfair Display', serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --background: #FAF8F5;
+  --foreground: #1E2321;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FAF8F5;
+  color: #1E2321;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom editorial styling */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom Range Slider styling for the OTA Bleed Calculator */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #E5DFD5;
+  border-radius: 9999px;
+  height: 6px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1B3B2B;
+  border: 3px solid #FAF8F5;
+  box-shadow: 0 2px 6px rgba(27, 59, 43, 0.35);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #C87D55;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #1B3B2B;
+  border: 3px solid #FAF8F5;
+  box-shadow: 0 2px 6px rgba(27, 59, 43, 0.35);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  background: #C87D55;
+}
+
+/* Glassmorphism utilities */
+.glass-nav {
+  background-color: rgba(250, 248, 245, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(229, 223, 213, 0.65);
+}
+
+.glass-card-light {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 223, 213, 0.8);
+}
+
+.glass-card-dark {
+  background-color: rgba(24, 28, 27, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle luxury animations */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.97); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}

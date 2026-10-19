@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Left A chevron in Architectural Forest Green -->
+  <path d="M 50 14 L 20 86 L 36 86 L 43 68 L 56 68 L 56 54 L 49 54 L 50 38 L 50 14 Z" fill="#1B3B2B"/>
+  
+  <!-- Right two parallel terracotta gold slashes -->
+  <path d="M 58 40 L 70 68 L 82 68 L 68 38 L 58 40 Z" fill="#C87D55"/>
+  <path d="M 72 40 L 84 68 L 96 68 L 82 40 L 72 40 Z" fill="#C87D55"/>
+</svg>
